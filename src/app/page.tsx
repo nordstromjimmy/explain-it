@@ -8,7 +8,8 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
 
   const handleExplain = async () => {
-    setLoading(true); // Set loading to true when the request starts
+    setLoading(true);
+
     try {
       const res = await fetch("/api/explain", {
         method: "POST",
@@ -20,18 +21,18 @@ export default function Home() {
     } catch (error) {
       setOutput("There was an error generating the explanation.");
     } finally {
-      setLoading(false); // Set loading to false when the request is done
+      setLoading(false);
     }
   };
 
   return (
     <main className="w-full max-w-2xl bg-white p-4 sm:p-8 rounded-2xl shadow-md mx-auto">
-      <h1 className="text-4xl font-bold mb-6 text-center">Explain..</h1>
+      <h1 className="text-4xl font-bold mb-6 text-center">Explainit.io</h1>
 
       <textarea
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder="Enter a topic or paste something here..."
+        placeholder="Enter a topic or concept you want explained..."
         className="w-full h-40 p-3 sm:p-4 mb-4 border border-gray-300 rounded-lg text-base"
       />
       <h4 className="text-xl font-bold mb-6 text-center">like i'm..</h4>
@@ -40,8 +41,8 @@ export default function Home() {
           <button
             key={l}
             onClick={() => setLevel(l as "5" | "15" | "25")}
-            className={`px-4 py-2 rounded-lg transition text-sm sm:text-base cursor-pointer ${
-              level === l ? "bg-blue-400 text-white" : "bg-gray-200"
+            className={`px-4 py-2 rounded-lg transition text-sm sm:text-base font-medium cursor-pointer ${
+              level === l ? "bg-indigo-400 text-white" : "bg-gray-300"
             }`}
           >
             {l} years old
@@ -51,7 +52,8 @@ export default function Home() {
 
       <button
         onClick={handleExplain}
-        className="w-full sm:w-auto block mx-auto bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition cursor-pointer"
+        className="w-full sm:w-auto block mx-auto bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition cursor-pointer disabled:opacity-25 disabled:cursor-not-allowed disabled:hover:bg-gray-900"
+        disabled={!input.trim()}
       >
         Explain it!
       </button>
