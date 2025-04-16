@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [input, setInput] = useState("");
@@ -27,7 +28,7 @@ export default function Home() {
 
   return (
     <main className="w-full max-w-2xl bg-white p-4 sm:p-8 rounded-2xl shadow-md mx-auto">
-      <h1 className="text-4xl font-bold mb-6 text-center">Explainit.io</h1>
+      <h1 className="text-4xl font-bold mb-6 text-center">Explainit</h1>
 
       <textarea
         value={input}
@@ -70,6 +71,14 @@ export default function Home() {
           </div>
         )
       )}
+      <footer className="bg-gray-800 text-white text-center py-4 mt-48">
+        <p>
+          &copy; {new Date().getFullYear()} Explain It. All rights reserved.
+        </p>
+        <Link href="/privacy-policy" className="text-blue-400 hover:underline">
+          Privacy Policy
+        </Link>
+      </footer>
     </main>
   );
 }
