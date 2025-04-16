@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <main className="w-full max-w-2xl bg-white p-4 sm:p-8 rounded-2xl shadow-md mx-auto">
-      <h1 className="text-4xl font-bold mb-6 text-center">Explainit</h1>
+      <h1 className="text-4xl font-bold mb-6 text-center">Explain It</h1>
 
       <textarea
         value={input}
