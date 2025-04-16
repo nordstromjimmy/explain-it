@@ -1,4 +1,5 @@
+/** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://www.explainit.io",
-  generateRobotsTxt: true,
+  siteUrl: "https://explainit.io", // Your domain name
+  generateRobotsTxt: true, // Will generate robots.txt as well
 };

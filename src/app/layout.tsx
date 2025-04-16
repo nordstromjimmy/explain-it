@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Explainit.io",
+  title: "explainit.io",
   description: "Understand anything, at your level.",
   icons: {
     icon: "/favicon.ico",
