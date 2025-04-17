@@ -23,7 +23,17 @@ export default function RootLayout({
         content="Explain complex topics in simple terms for any age. Make learning easy!"
       />
       <link rel="icon" href="/favicon.ico" />
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4372906584866838"
+        crossOrigin="anonymous"
+      ></script>
       <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4372906584866838"
+          crossOrigin="anonymous"
+        ></script>
         <script
           defer
           data-domain="explainit.io"
